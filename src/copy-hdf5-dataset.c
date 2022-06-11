@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
 	/**
 	 * The dataset properties
 	 */
-	DATASET dataset;
+	dataset_t dataset;
 
 	/**
 	 * Parse command line arguments

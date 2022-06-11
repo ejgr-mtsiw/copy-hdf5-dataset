@@ -11,7 +11,7 @@
 /**
  * Reads the dataset attributes from the hdf5 file
  */
-int read_attributes(const hid_t dataset_id, DATASET *dataset) {
+int read_attributes(const hid_t dataset_id, dataset_t *dataset) {
 
 	unsigned int n_classes = 0;
 	// Get attributes

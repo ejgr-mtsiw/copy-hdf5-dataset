@@ -16,15 +16,6 @@
 #include <malloc.h>
 #include <stdint.h>
 
-#define DATASET_OK 0
-
-#define DATASET_INVALID_DIMENSIONS 1
-#define DATASET_NOT_ENOUGH_CLASSES 2
-#define DATASET_NOT_ENOUGH_ATTRIBUTES 3
-#define DATASET_NOT_ENOUGH_OBSERVATIONS 4
-
-#define ERROR_ALLOCATING_DATASET_DATA 8
-
 /**
  * Attribute for number of classes
  */
@@ -53,7 +44,7 @@
 /**
  * Reads the dataset attributes from the hdf5 file
  */
-int read_attributes(const hid_t dataset_id, DATASET *dataset);
+int read_attributes(const hid_t dataset_id, dataset_t *dataset);
 
 /**
  * Reads the value of one attribute from the dataset
@@ -81,6 +72,7 @@ void get_dataset_dimensions(hid_t dataset_id, hsize_t *dataset_dimensions);
  * Calculates the dataset dimensions based on the number
  * of observations and attributes
  */
-int calculate_dataset_dimensions(DATASET *dataset, hsize_t *dataset_dimensions);
+int calculate_dataset_dimensions(dataset_t *dataset,
+		hsize_t *dataset_dimensions);
 
 #endif

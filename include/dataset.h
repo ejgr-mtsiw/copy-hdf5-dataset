@@ -8,7 +8,15 @@
 #ifndef DATASET_H
 #define DATASET_H
 
-typedef struct dataset {
+#define DATASET_OK 0
+
+#define DATASET_INVALID_DIMENSIONS 1
+#define DATASET_NOT_ENOUGH_CLASSES 2
+#define DATASET_NOT_ENOUGH_ATTRIBUTES 4
+#define DATASET_NOT_ENOUGH_OBSERVATIONS 8
+#define DATASET_ERROR_ALLOCATING_DATA 16
+
+typedef struct dataset_t {
 	/**
 	 * Number of attributes
 	 */
@@ -35,6 +43,6 @@ typedef struct dataset {
 	 */
 	unsigned int n_bits_for_class;
 
-} DATASET;
+} dataset_t;
 
 #endif
