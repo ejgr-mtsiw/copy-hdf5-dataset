@@ -1,2 +1,2 @@
 # copy-hdf5-dataset
-Copies a dataset generated in python to the format used by the C prototype
+Copies a dataset created by the python script and compresses it for use with the C code
