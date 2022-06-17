@@ -136,7 +136,7 @@ int main(int argc, char **argv) {
 	hsize_t input_chunk_dimensions[2] = { 1, input_dataset_dimensions[1] };
 
 	H5Pset_chunk(output_property_list_id, 2, output_chunk_dimensions);
-		//H5Pset_chunk(input_property_list_id, 2, input_chunk_dimensions);
+	//H5Pset_chunk(input_property_list_id, 2, input_chunk_dimensions);
 
 	if (args.compress_dataset == USE_COMPRESSION) {
 		// Set ZLIB / DEFLATE Compression.
@@ -145,9 +145,8 @@ int main(int argc, char **argv) {
 
 	// Create the output dataset
 	hid_t output_dataset_id = H5Dcreate2(output_file_id, args.datasetname,
-	H5T_NATIVE_ULONG, output_dataset_space_id, H5P_DEFAULT,
-			output_property_list_id,
-			H5P_DEFAULT);
+			H5T_STD_U64BE, output_dataset_space_id, H5P_DEFAULT,
+			output_property_list_id, H5P_DEFAULT);
 	fprintf(stdout, " - Output dataset created.\n");
 
 	fprintf(stdout, " - Starting filling in dataset.\n");
