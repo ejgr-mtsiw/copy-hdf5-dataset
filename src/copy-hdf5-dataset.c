@@ -145,7 +145,7 @@ int main(int argc, char **argv) {
 
 	// Create the output dataset
 	hid_t output_dataset_id = H5Dcreate2(output_file_id, args.datasetname,
-			H5T_STD_U64BE, output_dataset_space_id, H5P_DEFAULT,
+			H5T_STD_U64LE, output_dataset_space_id, H5P_DEFAULT,
 			output_property_list_id, H5P_DEFAULT);
 	fprintf(stdout, " - Output dataset created.\n");
 
